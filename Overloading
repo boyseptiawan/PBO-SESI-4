@@ -1,0 +1,35 @@
+class Televisi{
+    private double harga;
+    private double TotalBayar;
+
+  
+    public Televisi(double harga, int jumlah){
+        this.harga = harga;
+        this.TotalBayar = harga * (double)jumlah;
+
+    }
+
+    public Televisi(double harga, double jumlah){
+        this.harga = harga;
+        this.TotalBayar = harga * jumlah;
+    }
+
+    public double getTotalBayar(){
+        return TotalBayar;
+    }
+}
+
+public class Main {
+    public static void main (String[] args){
+        Televisi sharp    = new Televisi(1666000, 2);
+        Televisi samsung = new Televisi(1200000, 4);
+        Televisi polytron = new Televisi(600000, 3);
+        Televisi sumsang   = new Televisi(400000, 5);
+
+        System.out.println("Perhitungan harga Televisi");
+        System.out.println("harga Televidi sharp: " + sharp.getTotalBayar());
+        System.out.println("harga Televisi samsung : " + samsung.getTotalBayar());
+        System.out.println("harga Televisi polytron : " + polytron.getTotalBayar());
+        System.out.println("harga Televisi sumsang: " + sumsang.getTotalBayar());
+    }
+}
