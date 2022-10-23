@@ -1,0 +1,33 @@
+abstract class Buku{
+    protected abstract void kategori();
+}
+
+class Premium extends Buku{
+    protected void kategori(){
+        System.out.println("Paket 1 Rp. 1000.000");
+    }
+}
+
+class Basic extends Buku{
+    protected void kategori(){
+        System.out.println("Paket 2 Rp. 800.000");
+    }
+}
+
+class Regular extends Buku{
+    protected void kategori(){
+        System.out.println("Paket 3 3 Rp. 500.000");
+    }
+}
+
+public class Main{
+    public static void main(String[] args) {
+        Premium premium1 = new Premium();
+        premium1.kategori();
+        Basic basic1 = new Basic();
+        basic1.kategori();
+        Regular regular1 = new Regular();
+        regular1.kategori();
+
+    }
+}
