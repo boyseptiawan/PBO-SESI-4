@@ -1,17 +1,27 @@
-class Televisi{
-    private double harga;
+class Pajak{
+    private double bayar;
     private double TotalBayar;
 
-  
-    public Televisi(double harga, int jumlah){
-        this.harga = harga;
-        this.TotalBayar = harga * (double)jumlah;
+    public Pajak() {
+        bayar = 0;
+        TotalBayar = 0;
+    }
+
+    public Pajak(double bayar) {
+        this.bayar = bayar;
+        this.TotalBayar = bayar;
 
     }
 
-    public Televisi(double harga, double jumlah){
-        this.harga = harga;
-        this.TotalBayar = harga * jumlah;
+    public Pajak(double bayar, int jumlah){
+        this.bayar = bayar;
+        this.TotalBayar = bayar * (double)jumlah;
+
+    }
+
+    public Pajak(double bayar, double jumlah){
+        this.bayar = bayar;
+        this.TotalBayar = bayar * jumlah;
     }
 
     public double getTotalBayar(){
@@ -19,17 +29,17 @@ class Televisi{
     }
 }
 
-public class Main {
+public class main2 {
     public static void main (String[] args){
-        Televisi sharp    = new Televisi(1666000, 2);
-        Televisi samsung = new Televisi(1200000, 4);
-        Televisi polytron = new Televisi(600000, 3);
-        Televisi sumsang   = new Televisi(400000, 5);
+        Pajak t1 = new Pajak();
+        Pajak t2 = new Pajak(5000);
+        Pajak t3 = new Pajak(5000, 1);
+        Pajak t4 = new Pajak(5000, 7);
 
-        System.out.println("Perhitungan harga Televisi");
-        System.out.println("harga Televidi sharp: " + sharp.getTotalBayar());
-        System.out.println("harga Televisi samsung : " + samsung.getTotalBayar());
-        System.out.println("harga Televisi polytron : " + polytron.getTotalBayar());
-        System.out.println("harga Televisi sumsang: " + sumsang.getTotalBayar());
+        System.out.println("Perhitung Bayar Pajak");
+        System.out.println("Take home pay pajak 1 : " + t1.getTotalBayar());
+        System.out.println("Take home pay pajak 2 : " + t2.getTotalBayar());
+        System.out.println("Take home pay pajak 3 : " + t3.getTotalBayar());
+        System.out.println("Take home pay pajak 4 : " + t4.getTotalBayar());
     }
 }
