@@ -1,0 +1,45 @@
+class Kas{
+    private double bayar;
+    private double TotalBayar;
+
+    public Kas() {
+        bayar = 0;
+        TotalBayar = 0;
+    }
+
+    public Kas(double bayar) {
+        this.bayar = bayar;
+        this.TotalBayar = bayar;
+
+    }
+
+    public Kas(double bayar, int jumlah){
+        this.bayar = bayar;
+        this.TotalBayar = bayar * (double)jumlah;
+
+    }
+
+    public Kas(double bayar, double jumlah){
+        this.bayar = bayar;
+        this.TotalBayar = bayar * jumlah;
+    }
+
+    public double getTotalBayar(){
+        return TotalBayar;
+    }
+}
+
+public class Main3 {
+    public static void main (String[] args){
+        Kas t1 = new Kas();
+        Kas t2 = new Kas(1000);
+        Kas t3 = new Kas(1000, 1);
+        Kas t4 = new Kas(1000, 3);
+
+        System.out.println("Perhitung Pembayaran Kas");
+        System.out.println("Pembayaran Kas 1 : " + t1.getTotalBayar());
+        System.out.println("Pembayaran Kas 2 : " + t2.getTotalBayar());
+        System.out.println("Pembayaran Kas 3 : " + t3.getTotalBayar());
+        System.out.println("Pembayaran Kas 4 : " + t4.getTotalBayar());
+    }
+}
